@@ -1,0 +1,35 @@
+loan-invest {
+    .loan-news-comp {
+        line-height:80px;
+
+        .loan-news-image {
+            height: 64px;
+            width: 30%;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+
+        .loan-news-info {
+            width: 65%;
+            margin-left: 8px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+
+            p {
+                font-size: small;
+
+                .loan-label {
+                    color: #0A0808;
+                }
+
+                .loan-label-value {
+                    color: #449AC2;
+                }
+            }
+        }
+
+
+    }
+}

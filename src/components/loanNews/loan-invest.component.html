@@ -1,0 +1,9 @@
+<div class="loan-news-comp" (click)="goToNewsDetail()">
+    <div class="loan-news-image"><img [src]="loanNews.imageUrl"/></div>
+    <div class="loan-news-info">
+        <h2>{{loanNews.title}}</h2>
+        <p>{{loanNews.slogan}}</p>
+        <p><span class="loan-label">发布机构</span> <span class="loan-label-value">{{loanNews.publishOrg}}</span></p>
+        <p><span class="loan-label">发布时间</span> <span class="loan-label-value">{{loanNews.publishTime | date: 'yyyy-MM-dd'}}</span></p>
+    </div>
+</div>

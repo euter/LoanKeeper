@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            贷款管家
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="no-scroll">
+    <div class="content">
+        <div class="my-photo-sticker">
+            <img src="assets/img/avatar-poe.png">
+            <p>点击设置头像</p>
+        </div>
+
+        <div class="nickname">
+            <ion-label>昵 称</ion-label>
+            <ion-input ></ion-input>
+        </div>       
+        <div class="line-separator"></div>
+
+        <div class="sex">
+            <ion-label>性 别</ion-label>
+            <div class="sex-selector">
+                <div class="male">
+                    <ion-radio value="male"></ion-radio>
+                    <span>帅哥</span>
+                </div>
+                <div class="female">
+                    <ion-radio value="female"></ion-radio>
+                    <span>美女</span>
+                </div>
+            </div>
+        </div>
+        <div class="line-separator"></div>
+
+        <div class="occupational-identity">
+            <ion-label>职业身份</ion-label>
+            <div class="occupational-identity-selector">
+                <button ion-button clear icon-right>
+                    <span>上班族</span>
+                    <ion-icon name="arrow-forward"></ion-icon>                      
+                </button>
+            </div>
+        </div>       
+        <div class="line-separator"></div>
+
+        <div class="location">
+            <ion-label>所在地 </ion-label>
+            <div class="location-selector">
+                <button ion-button clear icon-right>
+                    <span>北京朝阳 </span>
+                    <ion-icon name="arrow-forward"></ion-icon>                       
+                </button>
+            </div>
+        </div>
+        <div class="line-separator"></div>
+
+        <button ion-button block class="next-step">下一步</button>
+    </div>
+</ion-content>

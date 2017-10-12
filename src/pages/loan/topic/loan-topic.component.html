@@ -1,0 +1,57 @@
+<ion-header class="page-header">
+    <ion-navbar class="tab-hidden">
+        <ion-title style="width:100%">
+            贷款专题
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content has-tabs="false">
+    <div class="image-text-group">
+        <ion-slides loop="true" class="image-carousel">
+            <ion-slide><img src="assets/img/slide1.jpeg"> </ion-slide>
+            <ion-slide><img src="assets/img/slide2.jpeg"> </ion-slide>
+            <ion-slide><img src="assets/img/slide4.jpeg"> </ion-slide>
+        </ion-slides>
+        <div class="text">
+            <h5>{{topicName}}</h5>
+        </div>
+    </div>
+    <div class="line-separator"></div>
+    <div class="loan-topic-list">
+        <ion-list>
+            <ion-item *ngFor="let loanProductItem of getLoanProductsInTopic()">
+                <loan-product [loanProduct]="loanProductItem"></loan-product>
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <div class="line-separator"></div>
+    <div class="invite-friends">
+        <ion-label>呼唤朋友一起来贷款赚奖励</ion-label>
+        <div>
+            <button ion-button clear color="primary">
+                <ion-icon name="backspace"></ion-icon>                    
+            </button>
+            <button ion-button clear color="primary" end>
+                <ion-icon name="call"></ion-icon> 
+            </button>
+        </div>
+    </div>
+
+</ion-content>
+<ion-footer>
+    <ion-buttons end>
+
+        <button ion-button icon-left id="request-button">
+            <div>
+                <div id="request-button-text">立即申请</div>
+                <div id="success-num-hint">(已有19887人成功贷款)</div>
+            </div>
+        </button>
+        <button ion-button clear icon-left id="collection-button">
+            <ion-icon name="star-outline" ></ion-icon>
+            收藏
+        </button>
+    </ion-buttons>
+</ion-footer>

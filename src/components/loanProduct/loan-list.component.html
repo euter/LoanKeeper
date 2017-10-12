@@ -1,0 +1,8 @@
+<div class="loan-product-search-result">
+    <ion-list>
+      <ion-list-header color="light">共{{searchedResultSum}}个结果</ion-list-header>
+      <ion-item *ngFor="let loanProductItem of searchedResults">
+        <loan-product [loanProduct]="loanProductItem"></loan-product>
+      </ion-item>
+    </ion-list>
+</div>

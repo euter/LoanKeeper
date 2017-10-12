@@ -1,0 +1,57 @@
+$margin:16px;
+
+page-account-detail {
+
+    .account-content{
+        .account-detail-content, .account-detail-content * {
+            background-color: #465EC0;
+            color: #F3F2F2;
+        }
+
+        .account-detail-content {
+            width: 100%;
+            padding-top: 0px;
+            padding-bottom: 2px;
+
+            .cash-withdraw-quota-group {
+                text-align: center;
+                padding-top: 32px;// not margin-top 
+                .cash-withdraw-quota {
+                    font-size: 1.5em;
+                    width: 100%;
+                    margin-bottom: 16px;
+                }
+
+                .text {
+                    font-size: 0.8em;
+                    width: 100%;
+                    margin-bottom: 32px;
+                }
+
+            }
+
+            .withdraw-revenue-history {
+                width: 70%;
+                
+                margin-left: 15%;
+                margin-bottom: 32px;
+                //text-align: center;
+                //vertical-align: middle;
+
+
+                * {
+                    background-color:#F3F2F2;
+                    color: #302D2D;
+                }
+
+            }
+        }
+
+        .bottom-content {
+            margin: 32px;
+            button {
+                border-radius: 4px;
+            }
+        }
+    }
+}

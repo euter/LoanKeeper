@@ -1,0 +1,89 @@
+<ion-header class="page-header">
+    <ion-navbar class="tab-hidden">
+        <ion-title>
+            资讯正文
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="news-detail-content">
+        <div class="myself-current-member-area">
+            <div>
+                <img [src]="userProfile.headPortraitUrl">
+                <label>{{userProfile.nickname}}</label>
+            </div>
+            <div class="line-separator-2"></div>
+            <div>会员身份 <span>{{userProfile.member}}</span></div>
+        </div>
+
+        <div class="news-detail-header">
+            <div class="loan-news-info">
+                <h5 class="text">{{loanNews.title}}</h5>
+                <p class="text" *ngIf="loanNews.slogan">{{loanNews.slogan}}</p>
+                <p *ngIf="loanNews.publishOrg"><span class="loan-label">发布机构</span> <span class="loan-label-value">{{loanNews.publishOrg}}</span></p>
+                <div class="line-separator" *ngIf="loanNews.publishOrg"></div>
+                <p *ngIf="loanNews.publishTime"><span class="loan-label">发布时间</span> <span class="loan-label-value">{{loanNews.publishTime | date: 'yyyy-MM-dd'}}</span></p>
+                <div class="line-separator" *ngIf="loanNews.publishTime"></div>
+                <p *ngIf="loanNews.keyWords"><span class="loan-label">关键词</span>
+                    <span class="loan-label-value" *ngFor="let keyword of loanNews.keyWords">{{keyword}} </span>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="news-detail-text" *ngIf="hasReadPermission(); else updateMemberHint">
+            <div class="loan-news-image" *ngIf="loanNews.imageUrl"><img [src]="loanNews.imageUrl" /></div>
+            <p>{{loanNews.content}}</p>
+        </div>
+        <ng-template #updateMemberHint>
+            <div class="update-memeber-hint">
+                <img src="assets/img/ic_menu_show_sys.png">
+                <p>对不起，你当前访问的VIP会员内容，升级为VIP即可完整观看！</p>
+                <button ion-button full class="member-update-btn" color="lightOrange" (click)="goToUpqradeMemberPage()">立即升级</button>
+                <div class="line-separator"></div>
+                <div class="line-decorate-separator">
+                    <div></div>
+                    <div class="text">会员特权</div>
+                    <div></div>
+                </div>
+                <ion-list no-lines class="member-category-privilege-list">
+                    <ion-item>
+                        <ion-label>查看最新的收费文章</ion-label>
+                        <ion-checkbox checked disabled="true"></ion-checkbox>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>获取最新资讯推送</ion-label>
+                        <ion-checkbox checked disabled="true"></ion-checkbox>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>人工客服一对一服务</ion-label>
+                        <ion-checkbox checked disabled="true"></ion-checkbox>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>会员专享特权</ion-label>
+                        <ion-checkbox checked disabled="true"></ion-checkbox>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </ng-template>
+
+    </div>
+
+</ion-content>
+
+<ion-footer>
+    <ion-buttons end>
+
+        <button ion-button icon-left class="request-button">
+                <div>
+                    <div id="request-button-text">立即申请</div>
+                    <div id="success-num-hint">(已有19887人成功贷款)</div>
+                </div>
+            </button>
+        <button ion-button clear icon-left class="collection-button">
+                <ion-icon name="star-outline" ></ion-icon>
+                收藏
+            </button>
+    </ion-buttons>
+</ion-footer>

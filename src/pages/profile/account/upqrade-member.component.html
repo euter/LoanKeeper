@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            我的
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="content">
+        <div class="myself-current-member-area">
+            <div>
+                <img [src]="userProfile.headPortraitUrl">
+                <label >{{userProfile.nickname}}</label>
+            </div>
+            <div class="line-separator-2"></div>
+            <div>会员身份 <span>{{userProfile.member}}</span></div>
+        </div>
+
+        <div class="member-categorys">
+            <div class="member-category-item" *ngFor="let memberItem of getMemberCategoryWithFee(); let i = index">
+                <div class="item-header">                 
+                    <ion-checkbox [(ngModel)]="checkedStates[i]" (ionChange)="updateSelect(i)"></ion-checkbox>
+                    <label id="item-label">{{memberItem.name}}</label>
+                    <div class="member-fee"><span>{{memberItem.membershipFee|currency:'CNY':true:'1.0-2'}}</span> 每{{memberItem.feeUnit}}</div>
+                </div>
+                <div class="privilege-list">
+                    <p *ngFor="let privilege of memberItem.privileges">.{{privilege}}</p>
+                </div>
+                <div class="line-separator"></div>
+            </div>
+            <button ion-button full class="member-update-btn" color="lightOrange">立即升级</button>
+                
+        </div>
+       
+    </div>
+
+    
+
+</ion-content>
+<!--
+<ion-footer>
+        <button ion-button full class="next-step" color="lightOrange">立即升级</button>
+</ion-footer>
+-->

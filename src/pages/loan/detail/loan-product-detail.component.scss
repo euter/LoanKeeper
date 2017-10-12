@@ -1,0 +1,136 @@
+page-loan-product-detail {
+
+    .loan-product-header {
+        h5 {
+            font-size: 1.2em;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+
+        .loan-product-header::last-child {
+            text-align: bottom;
+        }     
+    }
+
+    .loan-condition {
+        margin: 8px;
+
+        img {
+            width: 40px;
+            height: auto;
+        }
+
+        .detail-item-header {
+            font-size: 1.1em;
+
+        }
+
+        .brief-align-right {
+            width: 100%;
+            margin-left: 4px;
+            margin-right: 4px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            #product-label {
+                width: 75%;
+                font-size: 1.1em;
+                float: left;
+            }
+            
+            #expandable-button {
+                width: 20%;
+                max-width: 100px;
+                float: right;
+            }
+        }
+
+        .truncate-ellipsis {
+            margin: 8px;
+
+            display: block;
+            display: -webkit-box;
+            line-height: 1.7em;//20px: 12px font-size and 4px distant from the bottom and upper lines
+            max-height: 5.1em; /*line-height*3 */
+            -webkit-line-clamp:3;/* number of lines to show */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .truncate-ellipsis::after {
+            content: "...";
+            position: absolute;
+            right: -12px; 
+            bottom: 5px;
+        }
+
+        .stuff-list {
+            margin: 8px;
+    
+            .stuff-list-item {
+                margin: 0;
+                display:inline-block;  
+                vertical-align: middle;
+                text-align: center;       
+
+                >* {
+                    width: 100%;
+                    margin: 0;
+                    display:inline-block; 
+                    vertical-align: middle;
+                    text-align: center;
+
+                    font-size: 0.9em;
+                }
+          
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+
+    }
+
+    .invite-friends {
+        text-align: center;
+        margin-bottom: 24px;
+        margin-top: 8px;
+
+        div > * {
+            width: 41%;
+        }
+
+    }
+
+
+    ion-footer {
+        .collection-button {
+            width: 15%;
+            min-width: 64px;
+            max-width: 128px;
+            margin-left: 8px;
+            float: left;
+
+        }
+
+        .request-button {
+            width: 75%;
+            margin-left: 8px;
+            #request-button-text {
+                margin-top: 4px;
+            }
+            #success-num-hint {
+                font-size: x-small;
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+}

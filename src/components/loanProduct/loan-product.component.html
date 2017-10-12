@@ -1,0 +1,15 @@
+<div *ngIf="loanProduct" class="loan-product" (click)="goToLoanProductDetail()">
+    <div class="loan-product-image"><img [src]="loanProduct.imageUrl" /></div>
+    <div class="loan-product-info">
+        <h2>{{loanProduct.name}}</h2>
+        <p>{{loanProduct.slogan}}</p>
+        <p><span>贷款范围 </span><span class="number-style">{{loanProduct.minQuota}}-{{loanProduct.maxQuota}}</span></p>
+        <p *ngIf='loanProduct.dayRateInPercent; else monthRate'><span>日利率 </span><span class="number-style">{{loanProduct.dayRateInPercent}}%</span></p>
+        <ng-template #monthRate>
+            <p><span>月利率 </span><span class="number-style">{{loanProduct.monthRateInPercent}}%</span></p>
+        </ng-template>
+    </div>
+    <div class="loan-product-more">
+        <ion-icon name="arrow-forward" end></ion-icon>
+    </div>
+</div>

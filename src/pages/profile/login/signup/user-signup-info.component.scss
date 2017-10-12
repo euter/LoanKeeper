@@ -1,0 +1,103 @@
+$margin:16px;
+
+page-signup-info { 
+    .no-scroll .scroll-content{
+        overflow: hidden;
+    
+        .content {
+            margin: 16px;
+            .my-photo-sticker {
+                margin-top: 16px;
+                text-align: center;
+                vertical-align: middle;
+                img {
+                    max-width: 48px;
+                    max-height: 48px;
+                    display: inline-block;
+                }
+
+                p {
+                    width: 100%;
+                    display: inline-block;
+                }
+
+            }
+
+            .line-separator {
+                margin-left: $margin / 2;
+            
+                flex: 1;
+                height: 1px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .nickname {
+                margin-left: $margin / 2;
+                margin-right: $margin / 2;
+
+                vertical-align: middle;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                ion-input {
+                    border: none;
+                }
+
+            }
+
+            .sex {
+                margin-left: $margin / 2;
+                margin-right: $margin / 2;
+                vertical-align: middle;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .sex-selector {
+                    margin-left: $margin / 2;
+                    margin-right: $margin / 2;
+                    vertical-align: middle;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    .male, .female {
+                        margin-left: $margin / 2;
+                        margin-right: $margin / 2;
+                    }
+                }
+            }
+
+            .occupational-identity {
+                margin-left: $margin / 2;
+                margin-right: $margin / 2;
+                vertical-align: middle;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .location {
+                margin-left: $margin / 2;
+                margin-right: $margin / 2;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .next-step {
+                margin-top: 24px;
+            }
+
+        }
+    }
+
+
+}
+
+
+

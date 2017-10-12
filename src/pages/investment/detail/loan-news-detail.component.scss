@@ -1,0 +1,165 @@
+page-loan-news-detail {
+    .news-detail-content {
+        //margin: 8px;// not reference point
+
+        .myself-current-member-area {
+            margin: 16px;
+            margin-top: 16px;
+            margin-bottom: 32px;
+            vertical-align: middle;
+            background-color: #D6DBD8;
+            padding-bottom: 4px;
+            border-radius: 4px;
+          
+            span {
+                color:color($colors,primary);
+            }
+
+            #myself-current-member-area * {
+                background-color: #D6DBD8;
+            }
+
+            :first-child {
+                vertical-align: middle;
+                margin: 8px;
+                //text-align: center;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin-left: 8px;
+                }
+
+            }
+
+            .line-separator-2 {
+                flex: 1;
+                height: 1px;
+                width: 90%;
+                text-align: center;
+                vertical-align: middle;
+                margin-left: 5%;
+                border-bottom: 1px solid color($colors,light);
+            }
+
+            :last-child {
+                margin: 8px;
+                margin-left: 16px;
+                vertical-align: middle;
+            }
+
+        }
+
+        .news-detail-header {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            line-height:1.8em;
+            
+                    .loan-news-info {
+                        width: 100%;
+                        margin-left: 8px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        line-height: normal;
+
+                        .text {
+                            text-align: center;
+                        }
+            
+                        p {
+                            font-size: small;
+            
+                            .loan-label {
+                                color: #0A0808;
+                            }
+            
+                            .loan-label-value {
+                                color: #449AC2;
+                            }
+                        }
+                    }
+                
+                    
+
+
+        }
+
+        .news-detail-text {
+            line-height: 1.8em;
+            margin-left: 16px;
+            margin-right: 16px;
+
+            .loan-news-image {
+                height: auto;
+                width: 100%;
+                padding: 8px;
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+
+        .update-memeber-hint {
+            margin-left: 32px;
+            margin-right: 32px;
+            z-index: 99;           
+            text-align: center;
+            
+
+            .line-decorate-separator {
+                margin-top: 32px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                div:first-child, div:last-child {
+                    flex: 1;
+                    height: 1px;
+                    border-bottom: 1px solid #449AC2;
+                }
+
+                .text {
+                    margin: 0 .5em;
+                    color: #449AC2;
+                }
+            }
+
+            .member-update-btn {
+                margin-top: 64px;
+                margin-bottom: 64px;   
+                border-radius: 4px;
+                
+            }
+
+            .member-category-privilege-list {
+                margin-top: 24px;
+            }
+        }
+    }
+
+
+
+    ion-footer {
+        .collection-button {
+            width: 15%;
+            min-width: 64px;
+            max-width: 128px;
+            margin-left: 8px;
+            float: left;
+
+        }
+
+        .request-button {
+            width: 75%;
+            margin-left: 8px;
+            #request-button-text {
+                margin-top: 4px;
+            }
+            #success-num-hint {
+                font-size: x-small;
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+}

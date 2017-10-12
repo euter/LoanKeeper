@@ -1,0 +1,144 @@
+<ion-header class="page-header">
+    <ion-navbar class="tab-hidden">
+        <ion-title style="width:100%">
+            贷款详情
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content has-tabs="false">
+    <ion-list no-lines class="loan-product-header">
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/category_icon_favorite.png">
+            </ion-avatar>
+            <div>
+                <h5>{{loanProduct.name}}</h5>
+                <p>{{loanProduct.slogan}}</p>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div>
+                <p *ngIf='loanProduct.dayRateInPercent; else monthRate'><span>最低日息: </span><span class="number-style">{{loanProduct.dayRateInPercent}}%</span></p>
+                <ng-template #monthRate>
+                    <p><span>最低月息: </span><span class="number-style">{{loanProduct.monthRateInPercent}}%</span></p>
+                </ng-template>
+            </div>
+            <p item-end><span>贷款期限: </span><span class="number-style">{{loanProduct.minMonth}}-{{loanProduct.maxMonth}}月</span></p>
+        </ion-item>
+    </ion-list>
+    <div class="line-separator"></div>
+    <div class="loan-condition">
+<!--
+        <ion-list no-lines class="loan-product-header">
+            <ion-item>
+                <div item-start>
+                    <ion-icon name="sad" start></ion-icon>
+                    <label>产品简介</label>
+                </div>
+                <button ion-button clear icon-right item-end>
+                    <ion-label>展开</ion-label>
+                    <ion-icon name="arrow-forward" ></ion-icon>                      
+                </button>
+            </ion-item>
+        </ion-list>
+-->
+        <div class="brief-align-right">
+            <div id="product-label">
+                <ion-icon name="sad" start></ion-icon>
+                <label>产品简介</label>
+            </div>
+            <div id="expandable-button">
+                <button ion-button clear icon-right>
+                            <ion-label>展开</ion-label>
+                            <ion-icon name="arrow-forward" ></ion-icon>                      
+                    </button>
+            </div>
+        </div>
+        <div class="truncate-ellipsis"><span>{{loanProduct.brief}}</span></div>
+    </div>
+
+    <div class="line-separator"></div>
+    <div class="loan-condition">
+        <div class="detail-item-header">
+            <ion-icon name="sad" start></ion-icon>
+            贷款流程
+        </div>
+        <div class="stuff-list">
+            <div class="stuff-list-item">
+                <img src="assets/img/category_icon_favorite.png">
+                <label>信息填写</label>
+            </div>
+            <div class="stuff-list-item">
+                    <img src="assets/img/category_icon_picture.png">
+                <label>实名认证</label>
+            </div>
+            <div class="stuff-list-item">
+                <img src="assets/img/category_icon_theme.png">
+                <label>电话审核</label>
+            </div>
+            <div class="stuff-list-item">
+                <img src="assets/img/category_icon_zip.png">
+                <label>等待放款</label>
+            </div>
+        </div>
+    </div>
+    <div class="line-separator"></div>
+    <div class="loan-condition">
+        <div class="detail-item-header">
+            <ion-icon name="sad" start></ion-icon>
+            所需资料 
+        </div>
+        <div class="stuff-list">
+            <div class="stuff-list-item">
+                    <img src="assets/img/category_icon_document.png">
+                <label>信用卡</label>
+            </div>
+            <div class="stuff-list-item">
+                    <img src="assets/img/category_icon_music.png">
+                <label>运营商</label>
+            </div>
+            <div class="stuff-list-item">
+                    <img src="assets/img/category_icon_video.png">
+                <label>身份证</label>
+            </div>
+        </div>
+    </div>
+    <div class="line-separator"></div>
+    <div class="loan-condition" *ngIf="loanProduct.loanCondition">
+        <div class="detail-item-header">
+            <ion-icon name="sad" start></ion-icon>
+            贷款条件
+        </div>
+        <p *ngFor="let cond of loanProduct.loanCondition; let i=index">{{i+1}}. {{cond}}</p>
+    </div>
+
+    <div class="line-separator"></div>
+    <div class="invite-friends">
+        <ion-label>呼唤朋友一起来贷款赚奖励</ion-label>
+        <div>
+            <button ion-button clear color="primary">
+                <ion-icon name="backspace"></ion-icon>                    
+            </button>
+            <button ion-button clear color="primary" end>
+                <ion-icon name="call"></ion-icon> 
+            </button>
+        </div>
+    </div>
+
+</ion-content>
+<ion-footer>
+    <ion-buttons end>
+
+        <button ion-button icon-left class="request-button">
+            <div>
+                <div id="request-button-text">立即申请</div>
+                <div id="success-num-hint">(已有19887人成功贷款)</div>
+            </div>
+        </button>
+        <button ion-button clear icon-left class="collection-button">
+            <ion-icon name="star-outline" ></ion-icon>
+            收藏
+        </button>
+    </ion-buttons>
+</ion-footer>
