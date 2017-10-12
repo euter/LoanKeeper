@@ -1,28 +1,33 @@
 This is demo of loan mobile app to learn Angular 2 and Ionic 2. 
 
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+### download source code
+```bash
+git clone https://github.com/euter/LoanKeeper.git
+```
+### Set up the Development Environment
+Install Node.js(https://nodejs.org/en/download/) and npm if they are not already on your machine.
+Then install the Angular CLI globally.
+```bash
+$ npm install -g @angular/cli
+```
 
-## How to use this template
-
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+### Ionic CLI:
 
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
 ```
 
-Then, to run it, cd into `myTabs` and run:
+Then, to run it, cd into `LoanKeeper` and run:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ ionic cordova platform add android
+$ ionic cordova run android
+```
+or on android emulator:
+```bash
+$ ionic cordova platform add android
+$ ionic cordova emulate android -lcs
 ```
 
-Substitute ios for android if not on a Mac.
+Substitute android for ios if on a Mac.
 
