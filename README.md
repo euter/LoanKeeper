@@ -5,7 +5,7 @@ This is demo of loan mobile app to learn Angular 2 and Ionic 2.
 git clone https://github.com/euter/LoanKeeper.git
 ```
 ### Set up the Development Environment
-Install Node.js(https://nodejs.org/en/download/) and npm if they are not already on your machine.
+Install [Node.js](https://nodejs.org/en/download/) and npm if they are not already on your machine.
 Then install the Angular CLI globally.
 ```bash
 $ npm install -g @angular/cli
