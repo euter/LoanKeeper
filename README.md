@@ -1,3 +1,5 @@
+This is demo of loan mobile app to learn Angular 2 and Ionic 2. 
+
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
