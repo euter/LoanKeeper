@@ -1,0 +1,82 @@
+page-investment {
+
+    .invest-group {
+        margin: 8px;
+
+        .invest-item {
+            margin: 4px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius:4px;
+            .invest-item-info {
+                width: 60%;
+                display: inline-block;
+                vertical-align: middle;
+                align-items: right;
+  
+            }
+            .invest-item-image {
+                margin-right:8px;
+                margin-left: auto; 
+                display: inline-block;
+                vertical-align: middle;  
+                text-align: right;
+            }
+        }
+
+        .invest-item-stock {
+            @extend .invest-item;
+            background-color: #D6B628;
+        }
+
+        .invest-item-fund {
+            @extend .invest-item;
+            background-color: #DA7415;
+        }
+
+        .invest-item-fc {
+            @extend .invest-item;
+            background-color: #9E27B6;
+        }
+
+        .invest-item-futures {
+            @extend .invest-item;
+            background-color: #2089DF;
+        }
+
+    }
+
+    .image-carousel {
+        width: 100%;
+        height: auto;
+        //overflow: hidden;
+        //max-height: 100px;
+    }
+
+    @media screen and (min-height: 500px) {
+        .image-carousel {
+        width: 100%;
+        height: auto;
+        }
+    }
+
+    .loan-news-list {
+
+        .line-decorate-separator {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            div:first-child, div:last-child {
+                flex: 1;
+                height: 1px;
+                border-bottom: 1px solid #449AC2;
+            }
+
+            .text {
+                margin: 0 .5em;
+                color: #449AC2;
+            }
+        }
+    }
+}

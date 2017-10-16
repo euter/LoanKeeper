@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button clear>
+        签到
+      </button>
+    </ion-buttons>
+    <ion-title>
+      投资
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="invest-group">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="invest-item-stock">
+          <div class="invest-item-info">
+            <h2>股票</h2>
+            <p>购物优惠</p>
+          </div>
+          <div class="invest-item-image"><img src='http://jsfiddle.net/img/logo.png'></div>
+        </ion-col>
+        <ion-col class="invest-item-fund">
+          <div class="invest-item-info">
+            <h2>基金</h2>
+            <p>花钱更聪明</p>
+          </div>
+          <div class="invest-item-image"><img src='http://jsfiddle.net/img/logo.png'></div>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="invest-item-fc">
+          <div class="invest-item-info">
+            <h2>外汇</h2>
+            <p>权益我专属</p>
+          </div>
+          <div class="invest-item-image"><img src='http://jsfiddle.net/img/logo.png'></div>
+
+        </ion-col>
+        <ion-col class="invest-item-futures">
+          <div class="invest-item-info">
+            <h2>期货</h2>
+            <p>加油有返现</p>
+          </div>
+          <div class="invest-item-image"><img src='http://jsfiddle.net/img/logo.png'></div>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-slides class="image-carousel">
+      <ion-slide><img src="assets/img/slide3.jpeg"> </ion-slide>
+      <ion-slide><img src="assets/img/slide2.jpeg"> </ion-slide>
+      <ion-slide><img src="assets/img/slide4.jpeg"> </ion-slide>
+  </ion-slides>
+
+  <div class="loan-news-list">
+    <ion-list>
+      <ion-list-header color="light">
+        <div class="line-decorate-separator">
+          <div></div>
+          <div class="text">股票资讯</div>
+          <div></div>
+        </div>
+      </ion-list-header>
+      <ion-item *ngFor="let loanNewsItem of getLoanNewsForStock()">
+        <loan-invest [loanNews]="loanNewsItem"></loan-invest>
+      </ion-item>
+      <ion-list-header color="light">
+        <div class="line-decorate-separator">
+          <div></div>
+          <div class="text">基金资讯</div>
+          <div></div>
+        </div>
+      </ion-list-header>
+      <ion-item *ngFor="let loanNewsItem2 of getLoanNewsForFund()" >
+        <loan-invest [loanNews]="loanNewsItem2"></loan-invest>
+      </ion-item>
+      <ion-list-header color="light">
+        <div class="line-decorate-separator">
+          <div></div>
+          <div class="text">外汇资讯</div>
+          <div></div>
+        </div>
+      </ion-list-header>
+      <ion-item *ngFor="let loanNewsItem3 of getLoanNewsForForeignCurrency()">
+        <loan-invest [loanNews]="loanNewsItem3"></loan-invest>
+      </ion-item>
+      <ion-list-header color="light">
+
+        <div class="line-decorate-separator">
+          <div></div>
+          <div class="text"> 期货资讯</div>
+          <div></div>
+        </div>
+      </ion-list-header>
+      <ion-item *ngFor="let loanNewsItem4 of getLoanNewsForFutures()">
+        <loan-invest [loanNews]="loanNewsItem4"></loan-invest>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

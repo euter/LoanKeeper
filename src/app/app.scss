@@ -14,3 +14,31 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+$margin:16px;
+
+.number-style {
+    color: #F89090;
+}
+
+.line-separator {   
+    flex: 1;
+    height: 4px;
+    border-bottom: 4px solid color($colors,light);
+}
+
+.horizontal-line-separator {
+    margin-left: 8px;
+    margin-right: 8px;
+    flex: 1;
+    height: 2px;
+    border-bottom: 2px solid color($colors,light);
+}
+
+.vertical-line-separator {
+    flex: 1;
+    height: 40px;
+    width: 2px;
+    border-left: 2px solid color($colors,light);
+
+}

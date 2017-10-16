@@ -1,0 +1,134 @@
+ion-navbar ion-title {
+    text-align: center;
+
+}
+
+ion-input {
+    border-bottom: 1px solid #AEAFAE;
+}
+
+page-home {
+    .page-header {
+        background-color: #084ECE;
+    }
+
+    #topic-recommend-area {
+        width: -webkit-max-content;
+        width: max-content; 
+        display: flex;
+        flex-direction: row;    
+
+        .topic-item {
+            width: 96px;
+            left: 40px;
+            margin: 4px;
+            text-align: center;
+            border: 2px solid color($colors,light);    
+            
+            float:left;
+        }
+    }
+    .invest-group {
+        margin: 8px;
+
+        .invest-item {
+            margin: 4px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius:4px;
+            background-color: color($colors,light);
+            .invest-item-info {
+                width: 60%;
+                display: inline-block;
+                vertical-align: middle;
+                align-items: right;
+  
+            }
+            .invest-item-image {
+                margin-right:8px;
+                margin-left: auto; 
+                display: inline-block;
+                vertical-align: middle;  
+                text-align: right;
+            }
+        }
+
+    }
+    .image-carousel-area {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+
+        .image-carousel {
+            width: 100%;
+            height: auto;
+            //overflow: hidden;
+            //max-height: 100px;
+        }
+
+        @media screen and (min-height: 500px) {
+            .image-carousel {
+            width: 100%;
+            height: auto;
+            }
+        }
+            
+    }
+
+    .recommended-loan-product {
+        .recommended-loan-header {
+            display: flex;
+            flex-direction: row;
+            background-color: color($colors,light);
+
+            ion-label {
+                margin-left: 8px;
+            }
+        }
+
+    }
+
+    .topic-recommended {
+        .topic-recommended-header {
+            display: flex;
+            flex-direction: row;
+            background-color: color($colors,light);
+
+            ion-label {
+                margin-left: 8px;
+            }
+        }
+
+    }
+
+
+
+
+}
+
+.login-hint-info {
+    text-align: center; 
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+
+.verfty-code {
+    position:absolute;
+    width:60% ;
+    margin-right: 8px;
+}
+
+.verfty-code-group {
+    margin-top: 24px;
+}
+
+.next-step {
+    margin-top: 24px;
+}
+ion-footer ion-input {
+    position: absolute;
+    width: 88%;
+}
+

@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "LoanKeeper",
+  "short_name": "LoanKeeper",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      贷款列表
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="loan-search-header">
+    <ion-list>
+      <ion-list-header color="light">
+        <ion-icon name='home' start></ion-icon>
+        筛选贷款
+      </ion-list-header>
+    </ion-list>
+  </div>
+
+  <div class="loan-search-cond">
+    <div class="row">
+      <ion-label big>职业身份</ion-label>
+      <button ion-button small [clear]='targetIdx != 0' [outline]='targetIdx == 0' (click)='selectTGroupAll()'>全部</button>
+      <button ion-button small [clear]='targetIdx != 1' [outline]='targetIdx == 1' (click)='selectTGroupWork()'>上班族</button>
+      <button ion-button small [clear]='targetIdx != 2' [outline]='targetIdx == 2' (click)='selectTGroupFirm()'>企业主</button>
+      <button ion-button small [clear]='targetIdx != 3' [outline]='targetIdx == 3' (click)='selectTGroupHouseholds()'>个体户</button>
+    </div>
+    <div class="row">
+      <ion-label big>贷款金额</ion-label>
+      <button ion-button small [clear]='minQuotaIdx != 0' [outline]='minQuotaIdx == 0' (click)='selectMinQuotaAll()'>全部</button>
+      <button ion-button small [clear]='minQuotaIdx != 1' [outline]='minQuotaIdx == 1' (click)='selectMinQuotaThree()'>3000+</button>
+      <button ion-button small [clear]='minQuotaIdx != 2' [outline]='minQuotaIdx == 2' (click)='selectMinQuotaThirty()'>30000+</button>
+      <button ion-button small [clear]='minQuotaIdx != 3' [outline]='minQuotaIdx == 3' (click)='selectMinQuotaTen()'>100000+</button>
+    </div>
+  </div>
+
+  <lk-loan-list [searchedResults]= 'searchedResults'></lk-loan-list>
+
+</ion-content>

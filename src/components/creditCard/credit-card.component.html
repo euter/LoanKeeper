@@ -1,0 +1,11 @@
+<div *ngIf="creditCard" class="credit-card">
+    <div class="credit-card-image"><img [src]="creditCard.imageUrl"/></div>
+    <div class="credit-card-info">
+        <h2>{{creditCard.name}}</h2>
+        <p>{{creditCard.briefDescription}}</p>
+        <p>{{creditCard.appliedNumInCurMonth}}人本月申请</p>
+    </div>
+    <div class="credit-card-icon">
+        <ion-icon name="sunny" end></ion-icon>
+    </div>
+</div>

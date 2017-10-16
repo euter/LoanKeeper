@@ -1,0 +1,12 @@
+<div class="loan-news-comp" (click)="goToNewsDetail()">
+    <div class="loan-news-image"><img [src]="loanNews.imageUrl"/></div>
+    <div class="loan-news-info">
+        <h2>{{loanNews.title}}</h2>
+        <p>{{loanNews.slogan}}</p>
+    
+        <div class="loan-news-free-hint">
+            <div *ngIf='loanNews.isFree; else memberHint'>免费阅读</div>
+            <ng-template #memberHint>加入会员阅读</ng-template>
+        </div>
+    </div>
+</div>

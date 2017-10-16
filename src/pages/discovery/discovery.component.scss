@@ -1,0 +1,34 @@
+page-discovery {
+
+    .image-carousel {
+            width: 100%;
+            height: auto;
+            margin-bottom: 8px;
+    }
+    
+    @media screen and (min-height: 500px) {
+        .image-carousel {
+          width: 100%;
+          height: auto;
+        }
+    }
+
+    .member-group {
+      margin: 8px;
+      text-align: center;
+      vertical-align: middle;
+
+      .member {
+        margin-right: 8px;
+        margin-left: 8px;
+        display:inline-block;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    
+
+}

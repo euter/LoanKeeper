@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      贷款管家
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+      
+<ion-content class="no-scroll">
+  <div class="content">
+    <div class="login-hint-info">
+      <h2>输入手机号</h2>
+      <p>登录进入获取贷款</p>
+    </div>
+                  
+    <ion-input type="tel" placeholder="手机号" min=12 max=32 clearInput></ion-input>
+    <div class="verfty-code-group">
+      <div class="verfty-code">
+        <ion-input type="text" placeholder="验证码" clearInput></ion-input>
+      </div>
+      <ion-buttons end>
+      <button ion-button outline>获取验证码</button>
+      </ion-buttons>
+    </div>
+        
+    <button ion-button full class="next-step" (click)='gotoNext()'>下一步</button>
+
+  </div>
+</ion-content>

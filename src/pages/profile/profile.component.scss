@@ -1,0 +1,98 @@
+$margin:16px;
+
+page-profile {
+
+    .content {
+
+        .top-content, .top-content * {
+            background-color: #465EC0;
+            color: #F3F2F2;
+        }
+
+        .top-content img {
+            background-color:#F3F2F2;
+        }
+
+        .asset-profit-group {
+            margin-left: $margin;
+            margin-right: $margin;
+            text-align: left;
+            align-items: center;
+        }
+
+        .asset-profit {
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .invite, .myself-friend {
+            margin-left: $margin / 2;//should used to child
+            margin-right: $margin / 2;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .myself-member {
+            margin-left: $margin / 2;
+            margin-right: $margin / 2;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .myself-stuff {
+            margin-left: $margin / 2;
+            margin-right: $margin / 2;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .myself-collect {
+            margin-left: $margin / 2;
+            margin-right: $margin / 2;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .myself-apply {
+            margin-left: $margin / 2;
+            margin-right: $margin / 2;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-us {
+            margin-left: $margin / 2;
+            margin-right: $margin / 2;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    ion-item-divider {
+        height: 8px;
+    }
+    
+}

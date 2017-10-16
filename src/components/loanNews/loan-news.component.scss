@@ -1,0 +1,36 @@
+loan-news {
+    .loan-news-comp {
+        line-height:80px;
+
+        .loan-news-image {
+            height: 64px;
+            width: 30%;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+
+        .loan-news-info {
+            width: 65%;
+            margin-left: 8px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+
+            p {
+                font-size: small;
+            }
+
+            .loan-news-free-hint {
+                margin-top: 8px;
+                margin-right: 0;
+                text-align: right;
+                vertical-align: bottom;
+                color: #E69F9F;
+
+            }
+        }
+
+
+    }
+}

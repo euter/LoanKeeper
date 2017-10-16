@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      我的
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ion-list no-lines class="top-content">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/category_icon_favorite.png">
+        </ion-avatar>
+        <label>{{userProfileService.getNickname()}}</label>
+        <label item-end>{{userProfileService.getMember()}}</label>
+      </ion-item>
+      <ion-item class="asset-profit-group">
+        <div item-start class="asset-profit-group" (click)="goToAccountDetail()">
+            <div class="asset-profit" >
+                <ion-label> 总资产（元）</ion-label>
+                <ion-icon name="eye"></ion-icon>                      
+            </div>
+          <label>{{userProfileService?.userProfile?.assetsInYuan}}</label>
+        </div>
+        <div item-start class="asset-profit-group">
+          <div class="asset-profit">
+                <ion-label> 昨日收益（元）</ion-label>
+                <ion-icon name="alarm"></ion-icon>                      
+          </div>
+          <label>{{userProfileService?.userProfile?.YesterdayGainsInYuan | SignCurrency}}</label>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <div class="horizontal-line-separator"></div>
+    <div class="invite">
+      <ion-label>邀请好友加入获得积分</ion-label>
+      <button ion-button outline icon-right>立即邀请</button>
+    </div>
+
+    <div class="line-separator"></div>
+    <div class="myself-friend">
+      <ion-label>好 友</ion-label>
+      <ion-label>{{userProfileService?.userProfile?.hailFellowNum}}</ion-label>
+      <div class="vertical-line-separator"></div>
+      <ion-label>好友圈子</ion-label>
+      <ion-label>{{userProfileService?.userProfile?.hailFellowGroupNum}}</ion-label>
+    </div>
+    <div class="line-separator"></div>
+    <div class="myself-member">
+      <ion-label>会员身份</ion-label>
+      <ion-label>{{userProfileService.getMember()}}</ion-label>
+      <button ion-button outline icon-right (click)="goToMemberUpqrade()">立即升级为VIP</button>
+    </div>
+    <div class="line-separator"></div>
+    <div class="myself-stuff">
+      <ion-label>个人资料</ion-label>
+      <button ion-button clear icon-right (click)="editUserinfo()">
+        <ion-label>50%完成度</ion-label>
+        <ion-icon name="arrow-forward"></ion-icon>                      
+      </button>
+    </div>
+    <div class="line-separator"></div>
+    <div class="myself-collect">
+      <ion-label>我的收藏</ion-label>
+      <button ion-button clear icon-right>
+          <ion-icon name="arrow-forward"></ion-icon>                      
+        </button>
+    </div>
+    <div class="line-separator"></div>
+    <div class="myself-apply">
+      <ion-label>我的申请 </ion-label>
+      <button ion-button clear icon-right>
+          <ion-icon name="arrow-forward"></ion-icon>                      
+        </button>
+    </div>
+    <div class="line-separator"></div>
+    <div class="about-us">
+      <ion-label>关于我们</ion-label>
+      <button ion-button clear icon-right>
+        <ion-icon name="arrow-forward"></ion-icon>                      
+      </button>
+    </div>
+    <div class="line-separator"></div>
+  </div>
+  <!--
+  <ion-list>
+    <ion-item>
+      我的收藏
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item-divider color="light"></ion-item-divider>    
+    <ion-item>
+      我的申请
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item-divider color="light" sticky></ion-item-divider>    
+    <ion-item>
+      关于我们
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+-->
+</ion-content>

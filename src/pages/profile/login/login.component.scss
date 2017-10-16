@@ -1,0 +1,39 @@
+page-login {
+    ion-navbar ion-title {
+        text-align: center;
+    }
+
+    .no-scroll .scroll-content{
+        overflow: hidden;
+
+        .content {
+            margin:16px;
+
+            .login-hint-info {
+                text-align: center; 
+                margin-top: 48px;
+                margin-bottom: 16px;
+            }
+
+            .verfty-code-group {
+                margin-top: 24px;
+
+                .verfty-code {
+                    position: absolute;
+                    width: 60%;
+                }
+            }
+            
+            .next-step {
+                margin-top: 24px;
+            }
+
+            ion-input {
+                border-bottom: 1px solid #AEAFAE;
+            }
+        }
+    
+    }
+
+
+}

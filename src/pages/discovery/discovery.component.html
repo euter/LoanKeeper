@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        发现
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-slides class="image-carousel">
+      <ion-slide class="swiper-slide"><img src="assets/img/badu-live.png"> </ion-slide>
+      <ion-slide class="swiper-slide"><img src="assets/img/card-sf.png"> </ion-slide>
+      <ion-slide class="swiper-slide"><img src="assets/img/card-saopaolo.png"> </ion-slide>
+    </ion-slides>
+
+    <div class="member-group">
+      <div class="member">
+        <img src="assets/img/thumbnail-kitten-2.jpg">       
+        <ion-label>普通会员</ion-label>
+      </div>
+      <div class="member">  
+        <img src="assets/img/category_icon_document.png">      
+        <ion-label>白银会员</ion-label>
+      </div>
+      <div class="member">
+        <img src="assets/img/category_icon_document.png">    
+        <ion-label>黄金会员</ion-label>
+      </div>
+      <div class="member">
+        <img src="assets/img/category_icon_document.png">         
+        <ion-label>白金会员</ion-label>
+      </div>
+    </div>
+
+    <div class="credit-card-recommend">
+      <ion-list>
+        <ion-list-header color="light">推荐办卡</ion-list-header>
+        <ion-item *ngFor="let cerditCardItem of getCerditCardsForRecommend()">
+          <credit-card [creditCard]="cerditCardItem"></credit-card>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="loan-news-list">
+      <ion-list>
+        <ion-list-header color="light">网贷资讯</ion-list-header>
+        <ion-item *ngFor="let loanNewsItem of getLoanNewsForNet()">
+          <loan-news [loanNews]="loanNewsItem"></loan-news>
+        </ion-item>
+        <ion-list-header color="light">大额贷款资讯</ion-list-header>
+        <ion-item *ngFor="let loanNewsItem2 of getLoanNewsForLarge()">
+          <loan-news [loanNews]="loanNewsItem2"></loan-news>
+        </ion-item>
+        <ion-list-header color="light">投资资讯</ion-list-header>
+        <ion-item *ngFor="let loanNewsItem3 of getLoanNewsForInvest()">
+          <loan-news [loanNews]="loanNewsItem3"></loan-news>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </ion-content>

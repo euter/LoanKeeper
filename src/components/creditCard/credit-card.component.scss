@@ -1,0 +1,28 @@
+credit-card {
+    .credit-card {
+        line-height:80px;
+
+        .credit-card-image {
+            height: 64px;
+            width: 30%;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+
+        .credit-card-info {
+            width: 60%;
+            margin-left: 8px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+
+        .credit-card-icon {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+
+    }
+}

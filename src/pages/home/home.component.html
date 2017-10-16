@@ -1,0 +1,127 @@
+<ion-header class="page-header">
+  <ion-navbar>
+    <ion-buttons end *ngIf="!loginService.getIsLoggedIn()">
+      <button ion-button outline icon-left (click)='onLoginPage()'>
+        <ion-icon name="home"></ion-icon>
+          登录/注册
+      </button>
+    </ion-buttons>
+    <ion-title style="width:100%">
+      首页
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="image-carousel-area">
+    <ion-slides class="image-carousel">
+      <ion-slide><img src="assets/img/slide3.jpeg"> </ion-slide>
+      <ion-slide><img src="assets/img/slide2.jpeg"> </ion-slide>
+      <ion-slide><img src="assets/img/slide4.jpeg"> </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="invest-group">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="invest-item" (click)="goToLoanComponent()">
+          <div class="invest-item-info">
+            <h5>贷款大全</h5>
+            <p>总有适合你</p>
+          </div>
+          <div class="invest-item-image"><img src='http://jsfiddle.net/img/logo.png'></div>
+        </ion-col>
+        <ion-col class="invest-item" (click)='goToInvestmentComponent()'>
+          <div class="invest-item-info">
+            <h5>投资渠道</h5>
+            <p>最全的渠道信息</p>
+          </div>
+          <div class="invest-item-image"><img src='http://jsfiddle.net/img/logo.png'></div>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="invest-item">
+          <div class="invest-item-info">
+            <h5>分享赚钱</h5>
+            <p>奖励不重样</p>
+          </div>
+          <div class="invest-item-image"><img src='http://jsfiddle.net/img/logo.png'></div>
+
+        </ion-col>
+        <ion-col class="invest-item">
+          <div class="invest-item-info">
+            <h5>新手专属</h5>
+            <p>抢先贷款</p>
+          </div>
+          <div class="invest-item-image"><img src='http://jsfiddle.net/img/logo.png'></div>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="topic-recommended">
+    <div color="light" class="topic-recommended-header">
+      <ion-label>专题推荐</ion-label>
+    </div>
+    <!--
+    <ion-scroll id="ionScrollRegion" direction="x">
+      <div id="topic-recommend-area">
+        <div class="topic-item" ng-repeat="topic in getLoanTopics()">
+          <ion-label class="topic-name">最新</ion-label>
+          <ion-label class="number-style">20家</ion-label>
+        </div>
+      </div>
+    </ion-scroll>
+         <div class="topic-item">
+        <ion-label class="topic-name">最新 </ion-label>
+        <ion-label class="number-style">20+</ion-label>
+      </div>
+      <div class="topic-item">
+        <ion-label class="topic-name">极速放款</ion-label>
+        <ion-label class="number-style">50家</ion-label>
+      </div>
+      <div class="topic-item">
+        <ion-label class="topic-name">快速审查</ion-label>
+        <ion-label class="number-style">30家</ion-label>
+      </div>
+      <div class="topic-item">
+        <ion-label class="topic-name">校园贷</ion-label>
+        <ion-label class="number-style">40家</ion-label>
+      </div>
+  -->
+    <div id="topic-recommend-area">
+      <div class="topic-item" *ngFor="let topic of getLoanTopics()" (click)="goToLoanTopicPage(topic)">
+        <ion-label class="topic-name">{{topic}}</ion-label>
+        <ion-label class="number-style">{{getLoanProductsSumWithTopic(topic)}}家</ion-label>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="recommended-loan-product">
+    <div color="light" class="recommended-loan-header">
+      <ion-label>精选贷款</ion-label>
+      <button ion-button clear icon-right>查看全部</button>
+    </div>
+    <ion-list>
+      <ion-item *ngFor="let loanProductItem of getRecommendedLoans()">
+        <loan-product [loanProduct]="loanProductItem"></loan-product>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+</ion-content>
+<!--
+<ion-footer>
+    <ion-input type="text" placeholder="start typing..."></ion-input>
+      
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="ios-send" ></ion-icon>
+      </button>
+    </ion-buttons>
+</ion-footer>
+-->
